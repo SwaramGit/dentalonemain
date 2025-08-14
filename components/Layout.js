@@ -14,7 +14,7 @@ export default function Layout({ children }) {
           </div>
           <nav className="flex items-center gap-5 font-semibold text-sm">
             <Link href="/about-us" className="hover:text-sky-600">About</Link>
-            <Link href="/services" className="hover:text-sky-600">Services</</Link>
+            <Link href="/services" className="hover:text-sky-600">Services</Link>
             <Link href="/what-we-offer" className="hover:text-sky-600">What We Offer</Link>
             <Link href="/faq" className="hover:text-sky-600">FAQ</Link>
             <Link href="/contact-us" className="hover:text-sky-600">Contact</Link>

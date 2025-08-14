@@ -1,16 +1,13 @@
 import Image from 'next/image';
-import logo from '../public/logo.jpeg';
+import Link from 'next/link';
 
 export default function PrivacyPolicy() {
   return (
     <div className="max-w-4xl mx-auto p-6">
-      {/* Logo at the top */}
-      <div className="flex justify-center mb-6">
-        <Image src={logo} alt="Dental One Logo" width={150} height={150} />
-      </div>
-
-      <h1 className="text-2xl font-bold mb-4">Privacy Policy</h1>
-
+      <Link href="/">
+        <Image src="/logo.jpeg" alt="Logo" width={150} height={50} className="mb-6 cursor-pointer" />
+      </Link>
+      <h1 className="text-3xl font-bold mb-4">Privacy Policy</h1>
       <h2 className="text-xl font-semibold mt-4 mb-2">1. Data We Collect</h2>
       <ul className="list-disc pl-6">
         <li>Personal Information: Name, DOB, gender, email, phone, address.</li>
@@ -28,7 +25,7 @@ export default function PrivacyPolicy() {
         <li>Send reminders & alerts</li>
         <li>Family account access</li>
       </ul>
-      <p className="mt-2">We do not use your data for marketing without your consent.</p>
+      <p>We do not use your data for marketing without your consent.</p>
 
       <h2 className="text-xl font-semibold mt-4 mb-2">3. Data Sharing</h2>
       <ul className="list-disc pl-6">
@@ -37,7 +34,7 @@ export default function PrivacyPolicy() {
         <li>Guardians & dependents</li>
         <li>Firebase, AWS, Prometheus/Grafana</li>
       </ul>
-      <p className="mt-2">We do not sell or rent your data.</p>
+      <p>We do not sell or rent your data.</p>
 
       <h2 className="text-xl font-semibold mt-4 mb-2">4. Data Security</h2>
       <ul className="list-disc pl-6">
@@ -45,7 +42,26 @@ export default function PrivacyPolicy() {
         <li>Secure cloud hosting</li>
         <li>OTP login & periodic audits</li>
       </ul>
-      <p className="mt-2">You are responsible for keeping your credentials secure.</p>
+      <p>You are responsible for keeping your credentials secure.</p>
 
       <h2 className="text-xl font-semibold mt-4 mb-2">5. Your Rights</h2>
       <ul className="list-disc pl-6">
+        <li>Access, review, correct or delete personal data</li>
+        <li>Withdraw consent</li>
+      </ul>
+
+      <h2 className="text-xl font-semibold mt-4 mb-2">6. Children’s Privacy</h2>
+      <p>Minors' accounts are managed by guardians. Ownership transfers at age 18.</p>
+
+      <h2 className="text-xl font-semibold mt-4 mb-2">7. Data Retention</h2>
+      <p>We retain your data while your account is active or as legally required.</p>
+
+      <h2 className="text-xl font-semibold mt-4 mb-2">8. Updates to this Policy</h2>
+      <p>Changes will be posted in the app.</p>
+
+      <h2 className="text-xl font-semibold mt-4 mb-2">9. Contact</h2>
+      <p>Email: info@gabucandentistry.com</p>
+      <p>Phone: +1 408 945 8880</p>
+    </div>
+  );
+}

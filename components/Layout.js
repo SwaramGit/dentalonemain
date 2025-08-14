@@ -26,17 +26,6 @@ export default function Layout({ children }) {
 
       <footer className="border-t border-gray-100 mt-8">
         <div className="container-px py-8 text-sm text-gray-600 flex flex-col items-center gap-4">
-          <div className="flex flex-col items-center">
-            <span className="uppercase tracking-wide text-xs text-gray-500">Coming Soon</span>
-            <div className="mt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
-              <Link href="#" aria-label="Google Play (coming soon)">
-                <Image src="/play.png" alt="Google Play - Coming Soon" width={180} height={55} className="w-40 sm:w-44 md:w-48" />
-              </Link>
-              <Link href="#" aria-label="App Store (coming soon)">
-                <Image src="/app.png" alt="App Store - Coming Soon" width={180} height={55} className="w-40 sm:w-44 md:w-48" />
-              </Link>
-            </div>
-          </div>
           <div className="flex flex-col sm:flex-row gap-4 items-center">
             <Link href="/privacy-policy" className="hover:text-sky-600">Privacy Policy</Link>
             <Link href="/terms-and-conditions" className="hover:text-sky-600">Terms of Use</Link>

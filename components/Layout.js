@@ -6,13 +6,14 @@ export default function Layout({ children }) {
     <div className="min-h-screen bg-gray-50 text-gray-900">
       <header className="sticky top-0 bg-white/80 backdrop-blur border-b border-gray-100">
         <div className="container-px flex items-center justify-between h-16">
+          {/* Logo now clickable */}
           <div className="flex items-center gap-3">
-            <Link href="/" className="flex items-center gap-2">
-  <Image src="/logo.jpeg" alt="Logo" width={36} height={36} className="rounded-md cursor-pointer" />
-  <span className="font-extrabold tracking-tight">Dental One</span>
-</Link>
-
+            <Link href="/">
+              <Image src="/logo.jpeg" alt="Logo" width={36} height={36} className="rounded-md cursor-pointer" />
+            </Link>
+            <Link href="/" className="font-extrabold tracking-tight">Dental One</Link>
           </div>
+
           <nav className="flex items-center gap-5 font-semibold text-sm">
             <Link href="/about-us" className="hover:text-sky-600">About</Link>
             <Link href="/services" className="hover:text-sky-600">Services</Link>
@@ -22,17 +23,18 @@ export default function Layout({ children }) {
           </nav>
         </div>
       </header>
-      <main className="container-px py-10">{children}</main>
-      <footer className="border-t border-gray-100 mt-8">
-        <div className="container-px py-8 text-sm text-gray-600 text-center">
-  <div className="space-x-4 mb-2">
-    <Link href="/privacy-policy" className="hover:underline">Privacy Policy</Link>
-    <Link href="/terms-and-conditions" className="hover:underline">Terms & Conditions</Link>
-    <Link href="/contact-us" className="hover:underline">Contact Us</Link>
-  </div>
-  <p>© {new Date().getFullYear()} Dental One. All rights reserved.</p>
-</div>
 
+      <main className="container-px py-10">{children}</main>
+
+      <footer className="border-t border-gray-100 mt-8">
+        <div className="container-px py-6 text-sm text-gray-600 flex flex-col sm:flex-row justify-between items-center gap-3">
+          <p>© {new Date().getFullYear()} Dental One. All rights reserved.</p>
+          <div className="flex gap-4">
+            <Link href="/privacy-policy" className="hover:text-sky-600">Privacy Policy</Link>
+            <Link href="/terms-and-conditions" className="hover:text-sky-600">Terms of Use</Link>
+            <Link href="/contact-us" className="hover:text-sky-600">Contact</Link>
+          </div>
+        </div>
       </footer>
     </div>
   );
